@@ -1,0 +1,92 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+#countdown {
+    color: white;
+}
+
+#animFrame {
+    position: fixed;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 450px;
+    pointer-events: none;
+    display: none;
+}
+
+#btn {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    border-radius: 8px;
+    border: none;
+    color: black;
+}
+
+/* Wish UI styling */
+#wish-ui {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 999;
+}
+
+#wish-ui textarea {
+    width: 420px;
+    max-width: 90vw;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 16px;
+}
+
+.wish-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+    color: black;
+}
+
+#wish-input-wrap {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    #animFrame {
+        width: 400px;
+        height: auto;
+        bottom: 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    #wish-ui textarea {
+        width: 90vw;
+        font-size: 14px;
+    }
+
+    .wish-btn {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+}
