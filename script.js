@@ -2,7 +2,7 @@ const countdown = document.getElementById("countdown");
 const animFrame = document.getElementById("animFrame");
 const btn = document.getElementById("btn");
 
-const targetDate = new Date("September 20, 2025 00:00:00").getTime();
+const targetDate = new Date("September 20, 2025 01:23:00").getTime();
 const timer = setInterval(() => DISPLAYCOUNTDOWN(targetDate), 1000);
 
 function DISPLAYCOUNTDOWN(targetDate) {
@@ -23,9 +23,13 @@ function DISPLAYCOUNTDOWN(targetDate) {
 }
 
 function ChangeContent() {
-    countdown.innerHTML = "";
-    Animate();
+    countdown.innerHTML = "Happy Birthday Ruth! 🎉🎂🎈";
+    setTimeout(() => {
+        countdown.innerHTML = "";
+        Animate();
+    }, 3000);
 }
+
 
 function Animate() {
     animFrame.style.display = "block";
@@ -116,9 +120,9 @@ function showWishUI() {
         const escaped = escapeHtml(raw);
 
         if (escaped) {
-            countdown.innerHTML = `Your wish has been granted.`;
+            countdown.innerHTML = `Noted.`;
         } else {
-            countdown.innerHTML = `Your wish has been granted`;
+            countdown.innerHTML = `Noted.`;
         }
 
         wishUi.style.display = 'none';

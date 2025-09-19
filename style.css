@@ -1,15 +1,21 @@
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: black;
+    margin: 0;
 }
 
+/* Countdown */
 #countdown {
     color: white;
+    font-size: 48px;
+    text-align: center;
 }
 
+/* Animation frame */
 #animFrame {
     position: fixed;
     bottom: 25%;
@@ -19,20 +25,26 @@ body {
     height: 450px;
     pointer-events: none;
     display: none;
+    border-radius: 2px;
 }
 
+/* Button */
 #btn {
     position: fixed;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     display: none;
     border-radius: 8px;
     border: none;
     color: black;
+}
+
+#btn:hover {
+    background-color: yellow;
 }
 
 /* Wish UI styling */
@@ -43,13 +55,16 @@ body {
     transform: translateX(-50%);
     text-align: center;
     z-index: 999;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 #wish-ui textarea {
-    width: 420px;
-    max-width: 90vw;
+    width: 600px;
+    max-width: 100%;
     resize: vertical;
-    padding: 10px;
+    padding: 25px;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(0, 0, 0, 0.6);
@@ -60,33 +75,80 @@ body {
 .wish-btn {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     border-radius: 8px;
     border: none;
     color: black;
 }
 
+.wish-btn:hover {
+    background-color: yellow;
+}
+
 #wish-input-wrap {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 800px) {
+/* ======================
+   Mobile Optimizations
+   ====================== */
+@media (max-width: 768px) {
+    #countdown {
+        font-size: 32px;
+    }
+
     #animFrame {
-        width: 400px;
+        width: 90vw;
         height: auto;
-        bottom: 35%;
+        max-height: 40vh;
+    }
+
+    #btn {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    #wish-ui textarea {
+        font-size: 14px;
+        padding: 15px;
+        width: 90vw;
+    }
+
+    .wish-btn {
+        font-size: 18px;
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 480px) {
+    #countdown {
+        font-size: 24px;
+    }
+
+    #animFrame {
+        bottom: 30%;
+        width: 95vw;
+        max-height: 35vh;
+    }
+
+    #btn {
+        font-size: 16px;
+        padding: 6px 12px;
+        bottom: 10%;
+    }
+
+    #wish-ui {
+        bottom: 10%;
+    }
+
     #wish-ui textarea {
-        width: 90vw;
-        font-size: 14px;
+        font-size: 12px;
+        padding: 12px;
     }
 
     .wish-btn {
-        font-size: 14px;
-        padding: 7px 10px;
+        font-size: 16px;
+        padding: 6px 12px;
     }
 }
