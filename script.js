@@ -2,7 +2,7 @@ const countdown = document.getElementById("countdown");
 const animFrame = document.getElementById("animFrame");
 const btn = document.getElementById("btn");
 
-const targetDate = new Date("September 20, 2025 01:23:00").getTime();
+const targetDate = new Date("September 20, 2025 09:00:00").getTime();
 const timer = setInterval(() => DISPLAYCOUNTDOWN(targetDate), 1000);
 
 function DISPLAYCOUNTDOWN(targetDate) {
